@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMMAS</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .container {
+            text-align: center;
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            width: 100%;
+            margin: 20px;
+        }
+        h1 {
+            color: #0366d6;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            background: #eaeaea;
+            margin: 10px 0;
+            padding: 20px;
+            border-radius: 5px;
+            text-align: left;
+        }
+        .time {
+            color: #666;
+        }
+        .title {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        .abstract {
+            margin-top: 5px;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>TUM Workshop on Stochastic Modelling and Multi-Agent Systems (SMMAS)</h1>
+        <p class="title">May 7, 2024, 11:00 AM - 11:30 AM</p>
+        <div>
+            The TUM Workshop on Stochastic Modelling and Multi-Agent Systems features a series of insightful presentations on optimization, game theory, and machine learning. Topics include the application of online learning in Stackelberg games for optimal pricing strategies in supply chains, the dynamics of spatial matching markets and the impact of multihoming on market efficiency, and novel findings on block coordinate descent algorithms under the n-sided PL condition. Other highlights included a new estimator for policy evaluation in economic contexts, Monte Carlo methods for solving stochastic control problems, deep reinforcement learning for complex auction models, the performance of Stochastic Cubic Regularized Newton methods in gradient-dominated functions, and a comprehensive analysis of approval-based voting rules. The workshop provides an engaging platform for discussing innovative research and connecting with leading experts in the field. We thank all the presenters and hope to see you all again very soon!
+        </div>
+        <ul>
+            <li>
+                <strong>Larkin Liu - TU Munich</strong>
+                <span class="time">5:30 PM - 5:40 PM</span>
+                <div class="title">A Stackelberg Regret Minimizing Framework for Online Learning in Newsvendor Pricing Games</div>
+                <p class="abstract">We introduce the application of online learning in a Stackelberg game pertaining to a system with two learning agents in a dyadic exchange network, consisting of a supplier and retailer, specifically where the parameters of the demand function are unknown. In this game, the supplier is the first-moving leader, and must determine the optimal wholesale price of the product. Subsequently, the retailer who is the follower, must determine both the optimal procurement amount and selling price of the product. In the perfect information setting, this is known as the classical price-setting Newsvendor problem, and we prove the existence of a unique Stackelberg equilibrium when extending this to a two-player pricing game. In the framework of online learning, the parameters of the reward function for both the follower and leader must be learned, under the assumption that the follower will best respond with optimism under uncertainty. A novel algorithm based on contextual linear bandits with a measurable uncertainty set is used to provide a confidence bound on the parameters of the stochastic demand. Consequently, optimal finite time regret bounds on the Stackelberg regret, along with convergence guarantees to an approximate Stackelberg equilibrium, are provided.
+                </p>
+            </li>
+            <li>
+                <strong>Spatial Matching under Multihoming - London Business School </strong>
+                <span class="time">11:30 PM - 12:00 PM</span>
+                <div class="title">Ethical Considerations in AI-driven Legal Decision Making</div>
+                <p class="abstract">In spatial matching markets, such as ride-hailing and delivery services, academics and practitioners have stressed the importance of admission controls, such as surge pricing or matching systems, that maintain a sufficiently large "buffer'' of available supply to reduce dispatch distances and utilize labor time efficiently. However, the extent to which platforms have an incentive to maintain this buffer in competitive markets, where suppliers serve multiple platforms---a phenomenon known as multihoming---remains unclear.
+                    This paper studies this issue using a game-theoretic stochastic model, representing two platforms in a spatial market. Both platforms serve disjoint streams of customer requests, but they draw from a shared pool of suppliers, i.e., suppliers multihome. We analyze the large-market equilibria resulting from two classes of admission control policies. We find that in equilibrium, at least one platform accepts all its profitable customer requests, a strategy we term "undercutting", in a bid to gain market share. However, depending on the market characteristics, two different regimes arise.
+                    If both platforms undercut, the supply buffer is not maintained, and inefficiencies ensue. These scale-inefficient equilibria occur in symmetric markets where supply is scarce. In contrast, if only one platform undercuts, the market achieves scale efficiencies comparable to the monopolist scenario. Our results suggest that, in certain settings, multihoming might harm the operational efficiency of spatial matching markets even if it reduces market fragmentation.
+                </p>
+            </li>
+            <li>
+                <strong>Yutong Chao - TU Munich</strong>
+                <span class="time">1:00 PM - 1:30 PM</span>
+                <div class="title">Block Coordinate Gradient Descent: N-sided PL condition</div>
+                <p class="abstract">
+                    We consider the optimization problem of a non-convex function
+                    <math>
+                        <mi>min</mi>
+                        <mrow>
+                            <mo>x</mo>
+                            <mo>∈</mo>
+                            <msub>
+                                <mi>R</mi>
+                                <mi>d</mi>
+                            </msub>
+                        </mrow>
+                        <mrow>
+                            <mi>f</mi>
+                            <mo>(</mo>
+                            <mo>x</mo>
+                            <mo>)</mo>
+                            <mo>=</mo>
+                        </mrow>
+                        <mrow>
+                            <msup>
+                                <mn>2</mn>
+                                <mo>f</mo>
+                            </msup>
+                            <mo>(</mo>
+                            <mi>x</mi>
+                            <mn>1</mn>
+                            <mo>,</mo>
+                            <mo>...</mo>
+                            <mo>,</mo>
+                            <mi>x</mi>
+                            <mo>n</mo>
+                            <mo>)</mo>
+                            <mo>,</mo>
+                        </mrow>
+                    </math>
+                    where 
+                    <math>
+                        <msub>
+                            <mi>x</mi>
+                            <mi>i</mi>
+                        </msub>
+                        <mo>∈</mo>
+                        <msub>
+                            <mi>R</mi>
+                            <mi>di</mi>
+                        </msub>
+                    </math>
+                    denotes the i-th block of the variables. Our focus is on investigating the block coordinate descent (BCD) algorithm and its variations for tackling this problem. We introduce a set of conditions, termed the n-sided PL condition, which extends the well-established Polyak-Łojasiewicz (PL) condition and the concept of multi-convexity. This condition, satisfied by various classes of non-convex functions, allows us to analyze the behavior of BCD under such circumstances. Moreover, our study delves into scenarios where the objective function lacks a global Nash Equilibrium (NE). In such cases, we propose adapted versions of BCD that converge towards local NE points and analyze their convergence rates.
+                </p>
+                
+            </li>
+            <li>
+                <strong>Sina Akbari - EPFL</strong>
+                <span class="time">1:30 PM - 2:00 PM</span>
+                <div class="title">Non-linear Triple Changes Estimator for Targeted Policies</div>
+                <p class="abstract">
+                    The renowned difference-in-differences (DiD) estimator relies on the assumption of ‘parallel trends,’ which does not hold in many practical applications. To address this issue, the econometrics literature has turned to the triple difference estimator. Both DiD and triple difference are limited to assessing average effects exclusively. An alternative avenue is offered by the changes-in-changes (CiC) estimator, which provides an estimate of the entire counterfactual distribution at the cost of relying on (stronger) distributional assumptions. In this work, we extend the triple difference estimator to accommodate the CiC framework, presenting the ‘triple changes estimator’ and its identification assumptions, thereby expanding the scope of the CiC paradigm. Subsequently, we empirically evaluate the proposed framework and apply it to a study examining the impact of Medicaid expansion on children’s preventive care.
+                </p>
+            </li>
+            <li>
+                <strong>Shiqi Liu / Larkin Liu - L'Ecole Polytechnique / TUM</strong>
+                <span class="time">2:00 PM - 2:30 PM</span>
+                <div class="title">Solving Stochastic Control Problems via Monte Carlo Tree Search</div>
+                <p class="abstract">
+                    In the world of stochastic control, especially in economics and engineering, Markov Decision Processes (MDPs) can effectively model various stochastic decision processes, from asset management to transportation optimization. These underlying MDPs, upon closer examination, often reveal a specifically constrained causal structure concerning the transition and reward dynamics. By exploiting this structure, we can obtain a reduction in the causal representation of the problem setting, allowing us to solve of the optimal value function more efficiently. This work defines an MDP framework, the \texttt{SD-MDP}, where we disentangle the causal structure of MDPs' transition and reward dynamics, providing distinct partitions on the temporal causal graph. With this stochastic reduction, the \texttt{SD-MDP} reflects a general class of resource allocation problems. This disentanglement further enables us to derive theoretical guarantees on the estimation error of the value function under an optimal policy by allowing independent value estimation from Monte Carlo sampling. Subsequently, by integrating this estimator into well-known Monte Carlo planning algorithms, such as Monte Carlo Tree Search (MCTS), we derive bounds on the simple regret of the algorithm. Finally, we quantify the policy improvement of MCTS under the \texttt{SD-MDP} framework by demonstrating that the MCTS planning algorithm achieves higher expected reward (lower costs) under a constant simulation budget, on a tangible economic example based on maritime refuelling.
+                </p>
+            </li>
+
+            <li>
+                <strong>Fabian Pieroth -  TUM</strong>
+                <span class="time">2:30 PM - 3:00 PM</span>
+                <div class="title">Equilibrium Computation in Multi-Stage Auctions and Contests</div>
+                <p class="abstract">
+                    We compute equilibrium strategies in multi-stage games with continuous signal and action spaces as they are widely used in the management sciences and economics. Examples include sequential sales via auctions, multi-stage elimination contests, and Stackelberg competitions. In sequential auctions, analysts are required to derive not just single bids but bid functions for all possible signals or values that a bidder might have in multiple stages. Due to the continuity of the signal and action spaces, these bid functions come from an infinite dimensional space. While such models are fundamental to game theory and its applications, equilibrium strategies are rarely known. The resulting system of non-linear differential equations is considered intractable for all but elementary models. This has been limiting progress in game theory and is a barrier to its adoption in the field. We show that Deep Reinforcement Learning and self-play can learn equilibrium bidding strategies for various multi-stage games without making parametric assumptions on the bid function. We find equilibrium in models that have not yet been explored analytically and new asymmetric equilibrium bid functions for established models of sequential auctions. The verification of equilibrium is challenging in such games due to the continuous signal and action spaces. We introduce a verification algorithm and prove that the error of this verifier decreases when considering Lipschitz continuous strategies with increasing levels of discretization and sample sizes.
+                </p>
+            </li>
+
+            <li>
+                <strong>Saeed Masiha - EPFL</strong>
+                <span class="time">3:00 PM - 3:30 PM</span>
+                <div class="title">Complexity of Minimizing Projected-Gradient-Dominated Functions</div>
+                <p class="abstract">
+                    We study the performance of Stochastic Cubic Regularized Newton (SCRN) on a class of functions satisfying the gradient dominance property with 1 ≤ α ≤ 2, which holds in a wide range of applications in machine learning and signal processing. This condition ensures that any first-order stationary point is a global optimum. We prove that the total sample complexity of SCRN in achieving ϵ-global optimum is O(ϵ<sup>−7/(2α)+1</sup>) for 1 ≤ α < 3/2 and O˜(ϵ<sup>−2/α</sup>) for 3/2 ≤ α ≤ 2. SCRN improves the best-known sample complexity of stochastic gradient descent. Even under a weak version of the gradient dominance property, which is applicable to policy-based reinforcement learning (RL), SCRN achieves the same improvement over stochastic policy gradient methods. Additionally, we show that the average sample complexity of SCRN can be reduced to O(ϵ<sup>−2</sup>) for α = 1 using a variance reduction method with time-varying batch sizes. Experimental results in various RL settings showcase the remarkable performance of SCRN compared to first-order methods.
+                </p>
+            </li>
+
+            <li>
+                <strong>Chris Dong - TU Munich</strong>
+                <span class="time">3:30 PM - 4:00 PM</span>
+                <div class="title">Characterizations of (Sequential) Thiele Rules</div>
+                <p class="abstract">
+                    Approval-based committee (ABC) voting rules elect a fixed size subset of the candidates, a so-called committee, based on the voters' approval ballots over the candidates. While these rules have recently attracted significant attention, axiomatic characterizations are largely missing so far. We address this problem by characterizing ABC voting rules within the broad and intuitive class of sequential valuation rules. These rules compute the winning committees by sequentially adding candidates that increase the score of the chosen committee the most. In more detail, we first characterize almost the full class of sequential valuation rules based on mild standard conditions and a new axiom called consistent committee monotonicity. This axiom postulates that the winning committees of size k can be derived from those of size k-1 by only adding candidates and that these new candidates are chosen consistently. By requiring additional conditions, we derive from this result also a characterization of the prominent class of sequential Thiele rules. Finally, we refine our results to characterize three well-known ABC voting rules, namely sequential approval voting, sequential proportional approval voting, and sequential Chamberlin-Courant approval voting.
+                </p>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
